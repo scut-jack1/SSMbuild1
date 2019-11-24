@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="online.helloweb.dao.BookDao">
+    <!--增加一个books-->
+    <insert id="addBook" parameterType="Books">
+        insert into ssmbuild.books(bookID,bookName,bookCounts,detail)values
+        (#{bookID},#{bookName},#{bookCounts},#{detail})
+    </insert>
+    <!--根据ID删除books-->
+    <delete id="deleteBookByID" parameterType="int">
+        delete from ssmbuild.books where bookID=#{bookID}
+    </delete>
+    <!--更新books-->
+    <update id="updateBook" parameterType="Books">
+        update ssmbuild.books set bookName=#{bookName},bookCounts=#{bookCounts},detail=#{detail}
+        where bookID=#{bookID}
+    </update>
+    <!--根据ID查询book-->
+    <select id="queryBookByID" resultType="Books">
+        select *from ssmbuild.books where bookID=#{bookID}
+    </select>
+    <!--查询全部的书-->
+    <select id="queryAllBook" resultType="Books">
+        select *from ssmbuild.books
+    </select>
+
+</mapper>
