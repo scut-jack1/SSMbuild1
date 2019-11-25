@@ -23,10 +23,13 @@
                 </div>
             </div>
         </div>
-        <%--增加--%>
+        <%--新增--%>
         <div class="row">
             <div class="col-md-4 column">
                 <a class="btn btn-primary" href="${pageContext.request.contextPath}/book/toAddBook">新增</a>
+            </div>
+            <div class="col-md-4 column">
+                <span class="btn btn-primary">书籍总数:&nbsp;&nbsp;${list.size()}</span>
             </div>
         </div>
         <%--展示页面：表格，修改，删除--%>
@@ -40,7 +43,6 @@
                                 <th>书籍名称</th>
                                 <th>书籍数量</th>
                                 <th>书籍描述</th>
-
                                 <th>操作</th>
                             </tr>
                         </thead>
@@ -53,7 +55,7 @@
                                     <td>${book.getDetail()}</td>
                                     <td>
                                         <a href="${pageContext.request.contextPath}/book/toUpdateBook?id=${book.getBookID()}">更改</a>
-                                        <a href="${pageContext.request.contextPath}/book/del/${book.getBookID()}">删除</a>
+                                        &nbsp;<a href="${pageContext.request.contextPath}/book/del/${book.getBookID()}">删除</a>
                                     </td>
                                 </tr>
                             </c:forEach>

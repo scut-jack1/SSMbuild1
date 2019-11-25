@@ -13,7 +13,12 @@
 </head>
 <body>
     <div class="container">
-        <a href="${pageContext.request.contextPath}/book/allbook">进入书籍列表</a>
+        <div class="jumbotron">
+            <div class="text-center">
+                <h1>欢迎光临</h1>
+                <p><a href="${pageContext.request.contextPath}/book/allbook">进入书籍列表</a></p>
+            </div>
+        </div>
     </div>
 </body>
 </html>
