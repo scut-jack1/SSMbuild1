@@ -16,6 +16,9 @@
     <bean id="bookServiceImpl" class="online.helloweb.service.BookServiceImpl">
         <property name="bookDao" ref="bookDao"/>
     </bean>
+    <bean id="userServiceImpl" class="online.helloweb.service.UserServiceImpl">
+        <property name="userMapper" ref="userMapper"/>
+    </bean>
     <!--事务管理-->
     <bean class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <!--数据源DataSource-->

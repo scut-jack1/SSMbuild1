@@ -8,5 +8,6 @@
     </typeAliases>
     <mappers>
         <mapper resource="online/helloweb/dao/BookMapper.xml"/>
+        <mapper resource="online/helloweb/dao/UserMapper.xml"/>
     </mappers>
 </configuration>
