@@ -32,7 +32,7 @@
             <!-- 登录状态  -->
             <div class="text-center">
                 <span id="span_username"></span>
-                <a href="javascript:location.href='/ssm/user/exit';">退出</a>
+                <a href="${pageContext.request.contextPath}/user/exit">退出</a>
             </div>
         </div>
         <div class="jumbotron text-center" style="margin-bottom:0">
