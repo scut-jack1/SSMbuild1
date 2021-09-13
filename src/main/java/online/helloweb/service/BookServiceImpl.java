@@ -22,6 +22,7 @@ public class BookServiceImpl implements BookService {
     @Override
     public int addBook(Books books) {
         int a = 1;//第一次添加代码测试github
+        int a1 = 1;
         return bookDao.addBook(books);
     }
 
